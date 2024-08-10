@@ -3,14 +3,20 @@ import "./App.css";
 import charactersData from "./data";
 
 const Scorpion = () => {
+    // We set this to null for now so we can put data into this
     const [availability, setAvailbility] = useState(null);
 
     useEffect(() => {
         console.log(charactersData);
+        /*This look at data.js and it looks for the name of that character
+        and put it into a variable called matchingData */
         const matchingData = charactersData["scorpion"];
+        // setAvailbility will look at matchData
+        //and pull data from it
         setAvailbility(matchingData);
     }, []);
-
+    // this checks if availability is not there
+    // Returns Loading text
     if (!availability) {
         return <div>Loading...</div>;
     }
@@ -41,6 +47,8 @@ const Scorpion = () => {
                                     color: availability.ps2 ? "green" : "red",
                                 }}
                             >
+                                {/*This checks if availabilty Ps2 is true */}
+                                {/* if it is insert yes otherwise no */}
                                 {availability.ps2 ? "YES" : "NO"}
                             </span>
                         </div>

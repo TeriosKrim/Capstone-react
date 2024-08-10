@@ -4,16 +4,6 @@ import "./App.css";
 const Home = () => {
     return (
         <div className="container">
-            <div className="row">
-                <div className="col-8"></div>
-                <div
-                    className="col-4"
-                    id="latestVersion"
-                    style={{ fontFamily: "Bronzier, Arial, sans-serif" }}
-                >
-                    <p>The latest version is: v7</p>
-                </div>
-            </div>
             <div className="centered-image-container">
                 <img
                     src={require("./img/umkd-logo.png")}

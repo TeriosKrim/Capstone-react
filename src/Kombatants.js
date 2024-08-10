@@ -2,20 +2,18 @@ import React, { useState } from "react";
 import "./App.css";
 import { Link } from "react-router-dom";
 
-/*We take the data from Data.js so we don't have to  */
+/*We take the data from Data.js */
 const Kombatants = () => {
     const [characters, setCharacters] = useState(["Kenshi", "Jade"]);
 
     return (
         <>
             <div className="row">
-                <div className="col-8"></div>
-                <div className="col-4" id="latestVersion">
-                    <p>The latest version is: v7</p>
-                </div>
                 <h1>KOMBATANTS</h1>
                 <div className="row">
                     <div id="base">
+                        {/* we loop through each character and have it */}
+                        {/* Return the character image */}
                         {characters.map((character) => {
                             return (
                                 <img

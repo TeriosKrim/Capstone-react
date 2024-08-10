@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 import Home from "./Home";
 import Kombatants from "./Kombatants";
 import About from "./About";
-import Tier from "./Tier";
+import Tier from "./Tier/Tier";
 import "./App.css"; // Import the consolidated CSS file
 import Scorpion from "./Scorpion";
 
@@ -46,7 +46,7 @@ const myRoutes = createBrowserRouter([
         ),
     },
     {
-        path: "/tier",
+        path: "/tier-list",
         element: (
             <>
                 <Navbar />
