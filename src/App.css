@@ -407,44 +407,87 @@ h3 {
 
 /* tier list section */
 
-.tier-row {
+.tier-container {
     display: flex;
-    margin-bottom: 10px;
-    min-height: 60px;
-    border: 2px dashed #ccc;
-}
-
-.tier-label {
-    width: 30px;
-    height: 30px;
-    background-color: #333;
-    color: white;
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    margin-right: 10px;
+    width: 100%;
+    flex-grow: 1;
+    justify-content: space-between;
 }
 
-.characters-container {
+.tier {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    border: 2px solid #ccc;
+    background-color: transparent;
+}
+
+.tier h2 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.drop-target {
+    min-height: 60px; /* Adjust the size as needed */
+    border: 2px dashed #ccc; /* Dashed border */
+    background-color: transparent; /* Transparent background */
+    border-radius: 10px; /* Rounded corners to match the tier background */
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    flex-grow: 1;
+    justify-content: center;
+}
+
+.drop-target.is-over {
+    background-color: rgba(
+        255,
+        255,
+        255,
+        0.1
+    ); /* Slightly highlighted background when dragging over */
 }
 
 .character {
     width: 50px;
     height: 50px;
-    margin: 5px;
+    margin: 2px;
     cursor: move;
 }
+
+/* Character Pool */
+/* .character-pool {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    border: 2px dashed #ccc;
+    background-color: transparent;
+} */
 
 #characterPool {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 20px;
+    justify-content: center;
     padding: 10px;
+    background-color: transparent;
+    border: 2px solid #ccc;
+}
+
+.character-pool .drop-target {
     border: 2px solid #333;
+    opacity: 0;
+}
+
+h2 {
+    color: white;
+    font-family: "Bronzier", "Arial", sans-serif;
+    text-shadow: 1px 1px black;
 }
 
 @media only screen and (max-width: 600px) {

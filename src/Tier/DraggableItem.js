@@ -1,4 +1,3 @@
-// DraggableItem.js
 import React from "react";
 import { useDrag } from "react-dnd";
 
@@ -16,18 +15,18 @@ const DraggableItem = ({ item }) => {
     });
 
     return (
-        <div
+        <img
             ref={drag}
+            src={item.image}
             style={{
                 opacity: isDragging ? 0.5 : 1,
-                padding: "16px",
-                margin: "4px",
-                backgroundColor: "lightgrey",
-                border: "1px solid black",
+                width: "50px",
+                height: "50px",
+                margin: "2px",
+                cursor: "move",
             }}
-        >
-            <img src={item.image} />
-        </div>
+            alt={item.name}
+        />
     );
 };
 

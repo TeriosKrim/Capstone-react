@@ -1,4 +1,3 @@
-// DropTarget.js
 import React from "react";
 import { useDrop } from "react-dnd";
 import DraggableItem from "./DraggableItem";
@@ -21,17 +20,18 @@ const DropTarget = ({ items, onDrop }) => {
         <div
             ref={drop}
             style={{
-                minHeight: "200px",
-                width: "200px",
-                padding: "16px",
-                border: "1px solid red",
-                backgroundColor: isOver ? "lightgreen" : "white",
+                minHeight: "50px",
+                width: "100%",
+                padding: "10px",
+                border: "2px border #ccc",
+                backgroundColor: isOver ? "white" : "transparent",
+                transition: "background-color 0.3s ease",
             }}
         >
             {items.map((item) => (
                 <DraggableItem key={item.id} item={item} />
             ))}
-            {!items.length && <p>Drop items here</p>}
+            {!items.length && <p></p>}
         </div>
     );
 };
