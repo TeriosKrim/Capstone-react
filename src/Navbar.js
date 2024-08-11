@@ -27,7 +27,7 @@ const Navbar = () => {
                         <ul className="navbar-nav me-auto">
                             <li className="nav-item">
                                 <Link
-                                    className="nav-link active"
+                                    className="nav-link"
                                     aria-current="page"
                                     to="/"
                                 >

@@ -330,7 +330,11 @@ const Tier = () => {
                 <DndProvider backend={HTML5Backend}>
                     <div className="tier-container">
                         {Object.keys(tiers).map((tier) => (
-                            <div key={tier} className={`tier tier-${tier}`}>
+                            <div
+                                key={tier}
+                                style={{}}
+                                className={`tier tier-${tier}`}
+                            >
                                 <h2>{tier} Tier</h2>
                                 <DropTarget
                                     items={tiers[tier]}
