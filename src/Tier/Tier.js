@@ -1,10 +1,15 @@
+// tier.js
 import React, { useState } from "react";
 import "../App.css";
+// React DnD provider for drag-and-drop context
 import { DndProvider } from "react-dnd";
+// Backend for HTML5 drag-and-drop support
 import { HTML5Backend } from "react-dnd-html5-backend";
+// Importing the DropTarget component
 import DropTarget from "./DropTarget";
 
 const Tier = () => {
+    // Initial state for tiers, each tier is an array of items
     const initialTiers = {
         S: [],
         A: [],
@@ -13,7 +18,7 @@ const Tier = () => {
         D: [],
         F: [],
     };
-
+    // Initial state for the character pool, a list of character objects with id, name, image, and versions
     const initialCharacterPool = [
         {
             id: "Kenshi",
@@ -280,19 +285,23 @@ const Tier = () => {
             versions: ["Ultimate"],
         },
     ];
-
+    // State to hold the current tier lists
     const [tiers, setTiers] = useState(initialTiers);
+    // State to hold the current character pool
     const [characterPool, setCharacterPool] = useState(initialCharacterPool);
 
+    // Function to handle dropping an item into a tier
     const handleDrop = (itemId, targetTier) => {
         // Find the item in the character pool or tiers
         let item;
+        // Check if the item is in the character pool
         if (characterPool.some((character) => character.id === itemId)) {
             item = characterPool.find((character) => character.id === itemId);
             setCharacterPool((prev) =>
                 prev.filter((character) => character.id !== itemId)
             );
         } else {
+            // If not in the character pool, find and remove it from its current tier
             for (const tier in tiers) {
                 if (tiers[tier].some((character) => character.id === itemId)) {
                     item = tiers[tier].find(
@@ -309,7 +318,7 @@ const Tier = () => {
             }
         }
 
-        // Add the item to the target tier
+        // Add the item to the target tier if found
         if (item) {
             setTiers((prev) => ({
                 ...prev,
@@ -318,6 +327,7 @@ const Tier = () => {
         }
     };
 
+    // Function to reset the characters back to the initial state
     const resetCharacters = () => {
         setTiers(initialTiers);
         setCharacterPool(initialCharacterPool);
