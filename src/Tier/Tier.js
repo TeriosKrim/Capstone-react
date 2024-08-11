@@ -363,6 +363,7 @@ const Tier = () => {
                 </DndProvider>
             </div>
             <div id="disclaimer">
+                <p id="mod">Mod created by Ermaccer</p>
                 <p id="mod">I am not affiliated with the mod of any kind</p>
                 <p id="mod">Background by Monster Enjoyer</p>
                 <p id="warner">
