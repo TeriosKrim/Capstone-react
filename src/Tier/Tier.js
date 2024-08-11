@@ -346,7 +346,7 @@ const Tier = () => {
                         ))}
                     </div>
                     <div className="character-pool">
-                        <h2>Character Pool</h2>
+                        <h2>Characters</h2>
                         <DropTarget
                             items={characterPool}
                             onDrop={(itemId) =>

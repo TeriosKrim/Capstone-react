@@ -280,15 +280,12 @@ h1 {
 }
 #bossName {
     font-family: "Bronzier", "Arial", sans-serif;
-    margin-right: 100px;
     margin-top: 30px;
 }
 #onaga {
     display: flex;
-
     justify-content: center;
     /* flex-grow: 0; */
-    margin-right: 50px;
 
     /* border: 1px solid rgb(242, 255, 0); */
 }

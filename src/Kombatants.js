@@ -239,7 +239,15 @@ const Kombatants = () => {
                 </div>
 
                 <div className="row text-center" id="bossName">
-                    <div className="col">Boss character</div>
+                    <div className="col">
+                        <span
+                            style={{
+                                marginLeft: "30px",
+                            }}
+                        >
+                            Boss character
+                        </span>
+                    </div>
                 </div>
 
                 <div>
