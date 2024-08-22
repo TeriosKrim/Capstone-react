@@ -1,0 +1,27 @@
+Need to edit the selectable chart to include if characters are unlockable
+or not
+
+unlockables in the ps2/xbox version
+Jade
+Kenshi
+Sindel
+Havik
+Raiden
+Li Mei
+Noob-smoke
+Tanya
+Shujinko
+Hotaru 
+kira
+Liu kang
+
+unlockables in the gamecube version
+Kenshi
+Sindel
+Raiden
+Tanya
+Shujinko
+Liu kang
+
+
+everyone is unlocked from the start in the psp version
