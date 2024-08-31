@@ -1,6 +1,6 @@
 import { DataTypes } from "sequelize";
 
-const platform = (db) => {
+const Platform = (db) => {
     return db.define("platform", {
         id: {
             type: DataTypes.INTEGER,
@@ -13,3 +13,5 @@ const platform = (db) => {
         },
     });
 };
+
+export default Platform;

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import "./App.css";
+import { SignedOut, SignedIn, UserButton } from "@clerk/clerk-react";
 
 const Navbar = () => {
     return (
@@ -51,7 +52,12 @@ const Navbar = () => {
                             </li>
                         </ul>
                         <div className="d-flex bold">
-                            <p>Login</p>
+                            <SignedOut>
+                                <a href="/sign-in">login</a>
+                            </SignedOut>
+                            <SignedIn>
+                                <UserButton />
+                            </SignedIn>
                             {/* Login goes here */}
                         </div>
                     </div>

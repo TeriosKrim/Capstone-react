@@ -1,6 +1,6 @@
 import { DataTypes } from "sequelize";
 
-const login = (db) => {
+const Login = (db) => {
     return db.define("login", {
         id: {
             type: DataTypes.INTEGER,
@@ -17,3 +17,5 @@ const login = (db) => {
         },
     });
 };
+
+export default Login;

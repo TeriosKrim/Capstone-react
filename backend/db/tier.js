@@ -1,7 +1,7 @@
 import { platform } from "os";
 import { DataTypes } from "sequelize";
 
-const tier = (db) => {
+const Tier = (db) => {
     return db.define("tier", {
         id: {
             type: DataTypes.INTEGER,
@@ -22,3 +22,5 @@ const tier = (db) => {
         },
     });
 };
+
+export default Tier;

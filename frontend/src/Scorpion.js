@@ -5,6 +5,7 @@ import charactersData from "./data";
 const Scorpion = () => {
     // We set this to null for now so we can put data into this
     const [availability, setAvailbility] = useState(null);
+    const [comments, setComments] = useState();
 
     useEffect(() => {
         console.log(charactersData);
@@ -14,10 +15,34 @@ const Scorpion = () => {
         // setAvailbility will look at matchData
         //and pull data from it
         setAvailbility(matchingData);
+
+        const makeAPICall = async () => {
+            const res = await fetch(`http://localhost:3001/comment/1`);
+            const data = await res.json();
+            setComments(data.comments);
+        };
+        makeAPICall();
     }, []);
+
+    const commentPost = async (event) => {
+        event.preventDefault();
+
+        const response = await fetch(`http://localhost:3001/comment`, {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json",
+            },
+            body: JSON.stringify({
+                userComment: event.target.elements.userComment.value,
+                fighterID: 1,
+            }),
+        });
+        const data = await response.json();
+        console.log(data);
+    };
     // this checks if availability is not there
     // Returns Loading text
-    if (!availability) {
+    if (!availability || !comments) {
         return <div>Loading...</div>;
     }
 
@@ -388,21 +413,22 @@ const Scorpion = () => {
                             </div>
                         </div>
                         <div className="row">
+                            <div className="col">
+                                <h2>COMMENTS</h2>
+                                {comments.map((comment) => {
+                                    return <li>{comment.userComment}</li>;
+                                })}
+                            </div>
+                        </div>
+                        "
+                        <div className="row">
                             <h5>Add a comment about this character:</h5>
-                            <form id="comment-form">
-                                <input
-                                    type="text"
-                                    id="name-input"
-                                    placeholder="Your Username(optional)"
-                                    className="form-control mb-2"
-                                />
+                            <form id="comment-form" onSubmit={commentPost}>
                                 <textarea
-                                    id="comment-input"
                                     placeholder="Your comment"
                                     className="form-control mb-2"
+                                    id="userComment"
                                 ></textarea>
-                            </form>
-                            <div className="row">
                                 <div className="col-6">
                                     <button
                                         type="submit"
@@ -412,6 +438,8 @@ const Scorpion = () => {
                                         Submit
                                     </button>
                                 </div>
+                            </form>
+                            <div className="row">
                                 <div className="col-6 text-end">
                                     <button
                                         id="clearButton"

@@ -11,7 +11,7 @@ const Fighter = (db) => {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        orgin: {
+        origin: {
             type: DataTypes.STRING,
             allowNull: false,
         },
@@ -41,3 +41,5 @@ const Fighter = (db) => {
         },
     });
 };
+
+export default Fighter;

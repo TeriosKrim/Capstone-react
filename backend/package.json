@@ -12,6 +12,8 @@
     "license": "ISC",
     "description": "",
     "dependencies": {
+        "@clerk/backend": "^1.9.0",
+        "@clerk/nextjs": "^5.3.7",
         "cors": "^2.8.5",
         "express": "^4.19.2",
         "pg": "^8.12.0",

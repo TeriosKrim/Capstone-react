@@ -1,6 +1,6 @@
 import { DataTypes } from "sequelize";
 
-const misc = (db) => {
+const Misc = (db) => {
     return db.define("misc", {
         id: {
             type: DataTypes.INTEGER,
@@ -21,3 +21,5 @@ const misc = (db) => {
         },
     });
 };
+
+export default Misc;

@@ -1,6 +1,6 @@
 import { DataTypes } from "sequelize";
 
-const moves = (db) => {
+const Moves = (db) => {
     return db.define("moves", {
         id: {
             type: DataTypes.INTEGER,
@@ -33,3 +33,5 @@ const moves = (db) => {
         },
     });
 };
+
+export default Moves;
