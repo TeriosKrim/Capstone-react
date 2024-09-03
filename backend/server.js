@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import { db, comment, fighter } from "./db/db.js";
+import { db, comment, fighter, moves } from "./db/db.js";
 import { Sequelize } from "sequelize";
 import { createClerkClient } from "@clerk/backend";
 // import { Clerk } from "@clerk/backend";
@@ -11,7 +11,9 @@ server.use(cors());
 
 server.use(express.json());
 
-const clerkClient = createClerkClient({ secretKey: process.env.CLERK_SECRET_KEY });
+const clerkClient = createClerkClient({
+    secretKey: process.env.CLERK_SECRET_KEY,
+});
 
 const validateUserTokenMiddleware = (req, res, next) => {
     const header = req.headers.authorization;
@@ -81,18 +83,81 @@ server.post("/comment", validateUserTokenMiddleware, async (req, res) => {
     });
 });
 
+// Example route to create a move
+server.post("/moves", async (req, res) => {
+    try {
+        const newMove = await Moves(db).create(req.body);
+        res.status(201).json(newMove);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+// Example route to fetch all moves
+server.get("/moves", async (req, res) => {
+    try {
+        const allMoves = await Moves(db).findAll();
+        res.status(200).json(allMoves);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+// POST route to add data to the login table
+server.post("/login", async (req, res) => {
+    try {
+        const newLogin = await Login(db).create(req.body); // Assuming req.body has userName and userPassword
+        res.status(201).send(newLogin);
+    } catch (error) {
+        console.error("Error creating login:", error);
+        res.status(500).send({ error: "Error creating login" });
+    }
+});
+
+// POST route to add data to the misc table
+server.post("/misc", async (req, res) => {
+    try {
+        const newMisc = await Misc(db).create(req.body); // Assuming req.body has bio, ending, and fighterID
+        res.status(201).send(newMisc);
+    } catch (error) {
+        console.error("Error creating misc data:", error);
+        res.status(500).send({ error: "Error creating misc data" });
+    }
+});
+
+// POST route to add data to the platform table
+server.post("/platform", async (req, res) => {
+    try {
+        const newPlatform = await Platform(db).create(req.body); // Assuming req.body has name
+        res.status(201).send(newPlatform);
+    } catch (error) {
+        console.error("Error creating platform:", error);
+        res.status(500).send({ error: "Error creating platform" });
+    }
+});
+
+// POST route to add data to the tier table
+server.post("/tier", async (req, res) => {
+    try {
+        const newTier = await Tier(db).create(req.body); // Assuming req.body has fighterID, platformID, and tierLetter
+        res.status(201).send(newTier);
+    } catch (error) {
+        console.error("Error creating tier:", error);
+        res.status(500).send({ error: "Error creating tier" });
+    }
+});
+
 server.listen(3001, () => console.log("Listening on port 3001"));
 
 const existingFighter = await fighter.findOne();
 if (!existingFighter) {
     await fighter.create({
-        name: "Scorpion",
-        origin: "Netherrealm",
+        name: "Terios",
+        origin: "Earthrealm",
         alignment: "Neutral",
-        costumevariation: "3",
-        ps2: true,
-        gamecube: true,
-        psp: true,
-        ultimate: true,
+        costumevariation: "N/A",
+        ps2: false,
+        gamecube: false,
+        psp: false,
+        ultimate: false,
     });
 }

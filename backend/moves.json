@@ -1,0 +1,28 @@
+{
+    "Hapkido": [
+        {
+            "move": "Flowing water",
+            "button": "2,2,1",
+            "link": "https://youtu.be/h1t7jyGZycs"
+        },
+        {
+            "move": "Inner power",
+            "button": "2,2,4",
+            "link": "https://youtu.be/otherlink"
+        }
+    ],
+    "MoiFah": [
+        {
+            "move": "Move 1",
+            "button": "button1",
+            "link": "https://youtu.be/anotherlink"
+        }
+    ],
+    "Mugai Ryu": [
+        {
+            "move": "Move 1",
+            "button": "button1",
+            "link": "https://youtu.be/anotherlink"
+        }
+    ]
+}

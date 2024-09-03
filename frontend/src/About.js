@@ -32,7 +32,7 @@ const About = () => {
             </div>
             <div className="row" id="socials">
                 <div className="col">
-                    <img src="/img/yt.png" id="youTube" />
+                    <img src="/img/yt.png" id="youTube" alt="Youtube link" />
                     <p>
                         <a href="youtube.com/channel/UCtQa8sWwxoB88yq3bq6cYmg">
                             Terios Krim
@@ -41,7 +41,7 @@ const About = () => {
                 </div>
 
                 <div className="col" id="gh">
-                    <img src="/img/gh.png" alt="github" id="gitHub" />
+                    <img src="/img/gh.png" alt="github link" id="gitHub" />
                     <p>
                         <a href="https://github.com/TeriosKrim"> Terios krim</a>
                     </p>

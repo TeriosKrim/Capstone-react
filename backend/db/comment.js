@@ -1,4 +1,4 @@
-import { DataTypes } from "sequelize";
+import { DataTypes, Model } from "sequelize";
 
 const Comment = (db) => {
     return db.define("comment", {
@@ -20,7 +20,14 @@ const Comment = (db) => {
             allowNull: false,
             defaultValue: DataTypes.NOW,
         },
-        fighterID: DataTypes.INTEGER,
+        fighterID: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: "fighters",
+                key: "id",
+            },
+        },
     });
 };
 

@@ -26,6 +26,10 @@ const Moves = (db) => {
         fighterID: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            references: {
+                model: "fighters",
+                key: "id",
+            },
         },
         link: {
             type: DataTypes.TEXT,

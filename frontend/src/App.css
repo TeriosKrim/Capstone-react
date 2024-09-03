@@ -202,6 +202,8 @@ body::before {
 }
 
 #linkButton {
+    display: flex;
+    gap: 8px;
     margin-top: 80px;
 }
 #disclaimer {
@@ -400,6 +402,20 @@ h3 {
     height: auto;
     padding: 0px;
     margin: 0px;
+}
+#comments {
+    font-family: "Bronzier", "Arial", sans-serif;
+}
+
+.comment-block {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f900;
+    border-radius: 5px;
+}
+#userComment {
+    border: 1px solid white;
 }
 
 /* tier list section */

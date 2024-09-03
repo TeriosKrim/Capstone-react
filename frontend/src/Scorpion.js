@@ -17,7 +17,7 @@ const Scorpion = () => {
         setAvailbility(matchingData);
 
         const makeAPICall = async () => {
-            const res = await fetch(`http://localhost:3001/comment/1`);
+            const res = await fetch(`http://localhost:3001/comment/3`);
             const data = await res.json();
             setComments(data.comments);
         };
@@ -27,14 +27,18 @@ const Scorpion = () => {
     const commentPost = async (event) => {
         event.preventDefault();
 
+        const userComment = event.target.elements.userComment.value;
+
+        console.log("Submitting comment:", userComment);
+
         const response = await fetch(`http://localhost:3001/comment`, {
             method: "POST",
             headers: {
                 "Content-type": "application/json",
             },
             body: JSON.stringify({
-                userComment: event.target.elements.userComment.value,
-                fighterID: 1,
+                userComment: userComment,
+                fighterID: 3,
             }),
         });
         const data = await response.json();
@@ -119,6 +123,7 @@ const Scorpion = () => {
                         <img
                             src="img/Characters/Primary/Scorpion render2.png"
                             className="scorpion"
+                            alt="Scorpion Primary costume"
                         />
                     </div>
                 </div>
@@ -128,8 +133,14 @@ const Scorpion = () => {
                         <h1>Bio</h1>
                         <div className="row" id="scorpBio">
                             <div className="col text-center">
-                                <img src="/img/bios/scorpionbio1.png" />
-                                <img src="/img/bios/scorpionbio2.png" />
+                                <img
+                                    src="/img/bios/scorpionbio1.png"
+                                    alt="Scorpion bio 1"
+                                />
+                                <img
+                                    src="/img/bios/scorpionbio2.png"
+                                    alt="Scorpion bio 2"
+                                />
                             </div>
                         </div>
                     </div>
@@ -413,10 +424,16 @@ const Scorpion = () => {
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col">
+                            <div className="col" id="comments">
                                 <h2>COMMENTS</h2>
                                 {comments.map((comment) => {
-                                    return <li>{comment.userComment}</li>;
+                                    return (
+                                        <p id="userComment">
+                                            <strong>
+                                                {comment.userComment}
+                                            </strong>
+                                        </p>
+                                    );
                                 })}
                             </div>
                         </div>
@@ -428,28 +445,36 @@ const Scorpion = () => {
                                     placeholder="Your comment"
                                     className="form-control mb-2"
                                     id="userComment"
+                                    name="userComment" // Added name attribute
                                 ></textarea>
-                                <div className="col-6">
-                                    <button
-                                        type="submit"
-                                        id="submitButton"
-                                        className="btn btn-primary"
-                                    >
-                                        Submit
-                                    </button>
+                                <div className="row">
+                                    <div className="col-6">
+                                        <button
+                                            type="submit"
+                                            id="submitButton"
+                                            className="btn btn-primary"
+                                        >
+                                            Submit
+                                        </button>
+                                    </div>
+                                    <div className="col-6 text-end">
+                                        <button
+                                            id="clearButton"
+                                            type="button"
+                                            className="btn btn-danger"
+                                            onClick={() => {
+                                                document
+                                                    .getElementById(
+                                                        "comment-form"
+                                                    )
+                                                    .reset();
+                                            }}
+                                        >
+                                            Clear
+                                        </button>
+                                    </div>
                                 </div>
                             </form>
-                            <div className="row">
-                                <div className="col-6 text-end">
-                                    <button
-                                        id="clearButton"
-                                        type="button"
-                                        className="btn btn-danger"
-                                    >
-                                        Clear
-                                    </button>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
