@@ -211,7 +211,7 @@ const Scorpion = () => {
                                         <h3>Flowing water</h3>
                                         <h3>Inner power</h3>
                                         <h3>Spectre blast</h3>
-                                        <h3>Lethal Legs</h3>
+                                        <h3>Lethal legs</h3>
                                         <h3>Liftoff</h3>
                                         <h3>Burning soul</h3>
                                         <h3>Sinking leaf</h3>
@@ -223,6 +223,7 @@ const Scorpion = () => {
                                         <h3>Hell on earth</h3>
                                         <h3>Hidden string 1</h3>
                                         <h3>Hidden string 2</h3>
+                                        <h3>Hidden string 3</h3>
                                     </div>
                                     <div className="col">
                                         <h3>2,2,1</h3>
@@ -240,6 +241,7 @@ const Scorpion = () => {
                                         <h3>2,2,cs,1,3,3,cs</h3>
                                         <h3>2,2,3</h3>
                                         <h3>2,2,3,cs,3,cs</h3>
+                                        <h3>2,2,3,cs,3,3</h3>
                                     </div>
                                     <div className="col">
                                         <h3>
@@ -248,37 +250,59 @@ const Scorpion = () => {
                                             </a>
                                         </h3>
                                         <h3>
-                                            <a href="">link</a>
+                                            <a href="https://youtu.be/g5Ee_DOjPTo">
+                                                link
+                                            </a>
                                         </h3>
                                         <h3>
-                                            <a href="">link</a>
+                                            <a href="https://youtu.be/CDwD95qEpL8">
+                                                link
+                                            </a>
                                         </h3>
                                         <h3>
-                                            <a href="">link</a>
+                                            <a href="https://youtu.be/rRgEDaBdh54">
+                                                link
+                                            </a>
                                         </h3>
                                         <h3>
-                                            <a href="">link</a>
+                                            <a href="https://youtu.be/YuQkkgTg9p4">
+                                                link
+                                            </a>
                                         </h3>
                                         <h3>
-                                            <a href="">link</a>
+                                            <a href="https://youtu.be/uy0_pWBXZyg">
+                                                link
+                                            </a>
                                         </h3>
                                         <h3>
-                                            <a href="">link</a>
+                                            <a href="https://youtu.be/ap_A8tOdpsI">
+                                                link
+                                            </a>
                                         </h3>
                                         <h3>
-                                            <a href="">link</a>
+                                            <a href="https://youtu.be/iHSiLlTXEpM">
+                                                link
+                                            </a>
                                         </h3>
                                         <h3>
-                                            <a href="">link</a>
+                                            <a href="https://youtu.be/uLew0NqkI1c">
+                                                link
+                                            </a>
                                         </h3>
                                         <h3>
-                                            <a href="">link</a>
+                                            <a href="https://youtu.be/0A6JKeJ7NCw">
+                                                link
+                                            </a>
                                         </h3>
                                         <h3>
-                                            <a href="">link</a>
+                                            <a href="https://youtu.be/yAyxKNJ-sEA">
+                                                link
+                                            </a>
                                         </h3>
                                         <h3>
-                                            <a href="">link</a>
+                                            <a href="https://youtu.be/Cf1tLIHeZlw">
+                                                link
+                                            </a>
                                         </h3>
                                         <h3>
                                             <a href="https://youtu.be/QJHi5yfogWI">
@@ -286,10 +310,19 @@ const Scorpion = () => {
                                             </a>
                                         </h3>
                                         <h3>
-                                            <a href="">link</a>
+                                            <a href="https://youtu.be/bo4ROqmSXyo">
+                                                link
+                                            </a>
                                         </h3>
                                         <h3>
-                                            <a href="">link</a>
+                                            <a href="https://youtu.be/mUdyirNAxYg">
+                                                link
+                                            </a>
+                                        </h3>
+                                        <h3>
+                                            <a href="https://youtu.be/PHcL7T2YZ58">
+                                                link
+                                            </a>
                                         </h3>
                                     </div>
                                 </div>
@@ -298,56 +331,70 @@ const Scorpion = () => {
                                 <h2>MOI FAH</h2>
                                 <div className="row">
                                     <div className="col">
-                                        <h3>Move</h3>
+                                        <h3>Low fury</h3>
+                                        <h3>Fingers of death</h3>
+                                        <h3>Double tap kick</h3>
+                                        <h3>Pain taps</h3>
+                                        <h3>Chain kombo</h3>
+                                        <h3>Sharp as hell</h3>
+                                        <h3>Krazy rush</h3>
                                     </div>
                                     <div className="col">
-                                        <h3>button</h3>
+                                        <h3>f3,3</h3>
+                                        <h3>1,1,1</h3>
+                                        <h3>3,3</h3>
+                                        <h3>3,3,3</h3>
+                                        <h3>1,1,3,3,3</h3>
+                                        <h3>1,1,b1</h3>
+                                        <h3>1,1,4</h3>
                                     </div>
                                     <div className="col">
                                         <h3>
-                                            <a href="">link</a>
+                                            <a href="https://youtu.be/4p6BPoIedSU">
+                                                link
+                                            </a>
                                         </h3>
                                         <h3>
-                                            <a href="">link</a>
+                                            {
+                                                <a href="https://youtu.be/-l5lfuMACqQ">
+                                                    link
+                                                </a>
+                                            }
                                         </h3>
                                         <h3>
-                                            <a href="">link</a>
+                                            {
+                                                <a href="https://youtu.be/b6TaRxJ-TfE">
+                                                    link
+                                                </a>
+                                            }
                                         </h3>
                                         <h3>
-                                            <a href="">link</a>
+                                            {
+                                                <a href="https://youtu.be/RDaWhdV63T0">
+                                                    link
+                                                </a>
+                                            }
                                         </h3>
                                         <h3>
-                                            <a href="">link</a>
+                                            {
+                                                <a href="https://youtu.be/ioyOLXXQXQc">
+                                                    link
+                                                </a>
+                                            }
                                         </h3>
                                         <h3>
-                                            <a href="">link</a>
+                                            {
+                                                <a href="https://youtu.be/J-nt8hVtHI8">
+                                                    link
+                                                </a>
+                                            }
                                         </h3>
                                         <h3>
-                                            <a href="">link</a>
-                                        </h3>
-                                        <h3>
-                                            <a href="">link</a>
-                                        </h3>
-                                        <h3>
-                                            <a href="">link</a>
-                                        </h3>
-                                        <h3>
-                                            <a href="">link</a>
-                                        </h3>
-                                        <h3>
-                                            <a href="">link</a>
-                                        </h3>
-                                        <h3>
-                                            <a href="">link</a>
-                                        </h3>
-                                        <h3>
-                                            <a href="">link</a>
-                                        </h3>
-                                        <h3>
-                                            <a href="">link</a>
-                                        </h3>
-                                        <h3>
-                                            <a href="">link</a>
+                                            {
+                                                <a href="https://youtu.be/N4g55jC21jU">
+                                                    link
+                                                </a>
+                                            }
                                         </h3>
                                     </div>
                                 </div>
@@ -356,56 +403,36 @@ const Scorpion = () => {
                                 <h2>MUGAI RYU</h2>
                                 <div className="row">
                                     <div className="col">
-                                        <h3>Move</h3>
+                                        <h3>Bloodfire</h3>
+                                        <h3>Bloodbath</h3>
+                                        <h3>Swift fire</h3>
                                     </div>
                                     <div className="col">
-                                        <h3>button</h3>
+                                        <h3>2,2</h3>
+                                        <h3>2,2,1</h3>
+                                        <h3>2,2,4</h3>
                                     </div>
                                     <div className="col">
                                         <h3>
-                                            <a href="">link</a>
+                                            {
+                                                <a href="https://youtu.be/Gt0c4BSSIEA">
+                                                    link
+                                                </a>
+                                            }
                                         </h3>
                                         <h3>
-                                            <a href="">link</a>
+                                            {
+                                                <a href="https://youtu.be/mXqKs2zXq6I">
+                                                    link
+                                                </a>
+                                            }
                                         </h3>
                                         <h3>
-                                            <a href="">link</a>
-                                        </h3>
-                                        <h3>
-                                            <a href="">link</a>
-                                        </h3>
-                                        <h3>
-                                            <a href="">link</a>
-                                        </h3>
-                                        <h3>
-                                            <a href="">link</a>
-                                        </h3>
-                                        <h3>
-                                            <a href="">link</a>
-                                        </h3>
-                                        <h3>
-                                            <a href="">link</a>
-                                        </h3>
-                                        <h3>
-                                            <a href="">link</a>
-                                        </h3>
-                                        <h3>
-                                            <a href="">link</a>
-                                        </h3>
-                                        <h3>
-                                            <a href="">link</a>
-                                        </h3>
-                                        <h3>
-                                            <a href="">link</a>
-                                        </h3>
-                                        <h3>
-                                            <a href="">link</a>
-                                        </h3>
-                                        <h3>
-                                            <a href="">link</a>
-                                        </h3>
-                                        <h3>
-                                            <a href="">link</a>
+                                            {
+                                                <a href="https://youtu.be/Vvzw9xX7lIE">
+                                                    link
+                                                </a>
+                                            }
                                         </h3>
                                     </div>
                                 </div>
@@ -414,12 +441,74 @@ const Scorpion = () => {
                                 <h2>SPECIAL MOVES </h2>
                                 <div className="row">
                                     <div className="col">
-                                        <h3>Move</h3>
+                                        <h3>Bloody spear</h3>
+                                        <h3>Hellfire</h3>
+                                        <h3>Backflip kick</h3>
+                                        <h3>Teleport attack</h3>
+                                        <h3>Fatality 1</h3>
+                                        <h3>Fatality 2</h3>
+                                        <h3>Hara-kiri</h3>
                                     </div>
                                     <div className="col">
-                                        <h3>button</h3>
+                                        <h3>b,f,1</h3>
+                                        <h3>d,b,2</h3>
+                                        <h3>f,b,3</h3>
+                                        <h3>d,b,3</h3>
+                                        <h3>f,d,f,f,1(mid)</h3>
+                                        <h3>f,b,f,b,1(close)</h3>
+                                        <h3>d,d,u,b,1</h3>
                                     </div>
-                                    <div className="col">video link</div>
+                                    <div className="col">
+                                        <h3>
+                                            {
+                                                <a href="https://youtu.be/9u3jZEsXf5g">
+                                                    link
+                                                </a>
+                                            }
+                                        </h3>
+                                        <h3>
+                                            {
+                                                <a href="https://youtu.be/j4vBDMvRtiA">
+                                                    link
+                                                </a>
+                                            }
+                                        </h3>
+                                        <h3>
+                                            {
+                                                <a href="https://youtu.be/HbtVND0X6K0">
+                                                    link
+                                                </a>
+                                            }
+                                        </h3>
+                                        <h3>
+                                            {
+                                                <a href="https://youtu.be/FJytiYkODXY">
+                                                    link
+                                                </a>
+                                            }
+                                        </h3>
+                                        <h3>
+                                            {
+                                                <a href="https://youtu.be/YnVZeoH1S_g">
+                                                    link
+                                                </a>
+                                            }
+                                        </h3>
+                                        <h3>
+                                            {
+                                                <a href="https://youtu.be/4eIf5-qTZ0M">
+                                                    link
+                                                </a>
+                                            }
+                                        </h3>
+                                        <h3>
+                                            {
+                                                <a href="https://youtu.be/9l0BhYqOYIo">
+                                                    link
+                                                </a>
+                                            }
+                                        </h3>
+                                    </div>
                                 </div>
                             </div>
                         </div>
