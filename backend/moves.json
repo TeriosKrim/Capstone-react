@@ -1,28 +1,42 @@
 {
-    "Hapkido": [
-        {
-            "move": "Flowing water",
-            "button": "2,2,1",
-            "link": "https://youtu.be/h1t7jyGZycs"
-        },
-        {
-            "move": "Inner power",
-            "button": "2,2,4",
-            "link": "https://youtu.be/otherlink"
-        }
-    ],
-    "MoiFah": [
-        {
-            "move": "Move 1",
-            "button": "button1",
-            "link": "https://youtu.be/anotherlink"
-        }
-    ],
-    "Mugai Ryu": [
-        {
-            "move": "Move 1",
-            "button": "button1",
-            "link": "https://youtu.be/anotherlink"
-        }
-    ]
+    "Stances": {
+        "Hapkido": [
+            {
+                "move": "Flowing water",
+                "button": "2,2,1",
+                "link": "https://youtu.be/h1t7jyGZycs",
+                "fighterID": 3
+            },
+            {
+                "move": "Inner power",
+                "button": "2,2,4",
+                "link": "https://youtu.be/g5Ee_DOjPTo",
+                "fighterID": 3
+            }
+        ],
+        "MoiFah": [
+            {
+                "move": "Low fury",
+                "button": "f3,3",
+                "link": "https://youtu.be/4p6BPoIedSU",
+                "fighterID": 3
+            }
+        ],
+        "Mugai Ryu": [
+            {
+                "move": "Bloodfire",
+                "button": "2,2",
+                "link": "https://youtu.be/Gt0c4BSSIEA",
+                "fighterID": 3
+            }
+        ],
+        "Special moves": [
+            {
+                "move": "Bloody spear",
+                "button": "b,f,1",
+                "link": "https://youtu.be/9u3jZEsXf5g",
+                "fighterID": 3
+            }
+        ]
+    }
 }

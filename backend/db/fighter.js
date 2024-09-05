@@ -19,7 +19,7 @@ const Fighter = (db) => {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        costumevariation: {
+        costumevariations: {
             type: DataTypes.STRING,
             allowNull: false,
         },

@@ -1,0 +1,443 @@
+[
+    {
+        "name": "Kenshi",
+        "origin": "Earthrealm",
+        "alignment": "Good",
+        "costumevariations": "2",
+        "ps2": true,
+        "gamecube": true,
+        "psp": true,
+        "ultimate": true
+    },
+    {
+        "name": "Jade",
+        "origin": "Edenia",
+        "alignment": "Good",
+        "costumevariations": "2",
+        "ps2": true,
+        "gamecube": true,
+        "psp": true,
+        "ultimate": true
+    },
+    {
+        "name": "Scorpion",
+        "origin": "Earthrealm/Netherrealm",
+        "alignment": "Neutral",
+        "costumevariations": "3",
+        "ps2": true,
+        "gamecube": true,
+        "psp": true,
+        "ultimate": true
+    },
+    {
+        "name": "Mileena",
+        "origin": "Outworld",
+        "alignment": "Evil",
+        "costumevariations": "2",
+        "ps2": true,
+        "gamecube": true,
+        "psp": true,
+        "ultimate": true
+    },
+    {
+        "name": "Baraka",
+        "origin": "Outworld",
+        "alignment": "Evil",
+        "costumevariations": "2",
+        "ps2": true,
+        "gamecube": true,
+        "psp": true,
+        "ultimate": true
+    },
+    {
+        "name": "Sub-Zero",
+        "origin": "Earthrealm",
+        "alignment": "Good",
+        "costumevariations": "4",
+        "ps2": true,
+        "gamecube": true,
+        "psp": true,
+        "ultimate": true
+    },
+    {
+        "name": "Sindel",
+        "origin": "Edenia",
+        "alignment": "Good",
+        "costumevariations": "2",
+        "ps2": true,
+        "gamecube": true,
+        "psp": true,
+        "ultimate": true
+    },
+    {
+        "name": "Havik",
+        "origin": "Chaosrealm",
+        "alignment": "Neutral",
+        "costumevariations": "2",
+        "ps2": true,
+        "gamecube": true,
+        "psp": true,
+        "ultimate": true
+    },
+    {
+        "name": "Raiden",
+        "origin": "Heavens",
+        "alignment": "Neutral",
+        "costumevariations": "3",
+        "ps2": true,
+        "gamecube": true,
+        "psp": true,
+        "ultimate": true
+    },
+    {
+        "name": "Li-mei",
+        "origin": "Outworld",
+        "alignment": "Good",
+        "costumevariations": "2",
+        "ps2": true,
+        "gamecube": true,
+        "psp": true,
+        "ultimate": true
+    },
+    {
+        "name": "Kabal",
+        "origin": "Earthrealm",
+        "alignment": "Evil",
+        "costumevariations": "2",
+        "ps2": true,
+        "gamecube": true,
+        "psp": true,
+        "ultimate": true
+    },
+    {
+        "name": "Ermac",
+        "origin": "Outworld",
+        "alignment": "Good",
+        "costumevariations": "3",
+        "ps2": true,
+        "gamecube": true,
+        "psp": true,
+        "ultimate": true
+    },
+    {
+        "name": "Nightwolf",
+        "origin": "Earthrealm",
+        "alignment": "Good",
+        "costumevariations": "2",
+        "ps2": true,
+        "gamecube": true,
+        "psp": true,
+        "ultimate": true
+    },
+    {
+        "name": "Bo rai cho",
+        "origin": "Outworld",
+        "alignment": "Good",
+        "costumevariations": "2",
+        "ps2": true,
+        "gamecube": true,
+        "psp": true,
+        "ultimate": true
+    },
+    {
+        "name": "Noob-Smoke",
+        "origin": "Earthrealm/Netherrealm-Earthrealm",
+        "alignment": "Evil-Good",
+        "costumevariations": "2",
+        "ps2": true,
+        "gamecube": true,
+        "psp": true,
+        "ultimate": true
+    },
+
+    {
+        "name": "Tanya",
+        "origin": "Edenia",
+        "alignment": "Evil",
+        "costumevariations": "2",
+        "ps2": true,
+        "gamecube": true,
+        "psp": true,
+        "ultimate": true
+    },
+    {
+        "name": "Shujinko",
+        "origin": "Earthrealm",
+        "alignment": "Good",
+        "costumevariations": "2",
+        "ps2": true,
+        "gamecube": true,
+        "psp": true,
+        "ultimate": true
+    },
+    {
+        "name": "Hotaru",
+        "origin": "Orderrealm",
+        "alignment": "Neutral",
+        "costumevariations": "2",
+        "ps2": true,
+        "gamecube": true,
+        "psp": true,
+        "ultimate": true
+    },
+    {
+        "name": "Ashrah",
+        "origin": "Netherrealm",
+        "alignment": "Good",
+        "costumevariations": "2",
+        "ps2": true,
+        "gamecube": true,
+        "psp": true,
+        "ultimate": true
+    },
+    {
+        "name": "Dairou",
+        "origin": "Orderrealm",
+        "alignment": "Neutral",
+        "costumevariations": "2",
+        "ps2": true,
+        "gamecube": true,
+        "psp": true,
+        "ultimate": true
+    },
+    {
+        "name": "Kobra",
+        "origin": "Earthrealm",
+        "alignment": "Evil",
+        "costumevariations": "2",
+        "ps2": true,
+        "gamecube": true,
+        "psp": true,
+        "ultimate": true
+    },
+    {
+        "name": "Darrius",
+        "origin": "Orderrealm",
+        "alignment": "Neutral",
+        "costumevariations": "2",
+        "ps2": true,
+        "gamecube": true,
+        "psp": true,
+        "ultimate": true
+    },
+    {
+        "name": "Kira",
+        "origin": "Earthrealm",
+        "alignment": "Evil",
+        "costumevariations": "2",
+        "ps2": true,
+        "gamecube": true,
+        "psp": true,
+        "ultimate": true
+    },
+    {
+        "name": "Liu Kang",
+        "origin": "Earthrealm",
+        "alignment": "Neutral/Good",
+        "costumevariations": "2",
+        "ps2": true,
+        "gamecube": true,
+        "psp": true,
+        "ultimate": true
+    },
+    {
+        "name": "Shao Khan",
+        "origin": "Outworld",
+        "alignment": "Evil",
+        "costumevariations": "2",
+        "ps2": false,
+        "gamecube": true,
+        "psp": true,
+        "ultimate": true
+    },
+    {
+        "name": "Goro",
+        "origin": "Outworld",
+        "alignment": "Evil",
+        "costumevariations": "2",
+        "ps2": false,
+        "gamecube": true,
+        "psp": true,
+        "ultimate": true
+    },
+    {
+        "name": "Kitana",
+        "origin": "Edenia",
+        "alignment": "Good",
+        "costumevariations": "2",
+        "ps2": false,
+        "gamecube": false,
+        "psp": true,
+        "ultimate": true
+    },
+    {
+        "name": "Jax",
+        "origin": "Earthrealm",
+        "alignment": "Good",
+        "costumevariations": "2",
+        "ps2": false,
+        "gamecube": false,
+        "psp": true,
+        "ultimate": true
+    },
+    {
+        "name": "Frost",
+        "origin": "Earthrealm",
+        "alignment": "Evil",
+        "costumevariations": "2",
+        "ps2": false,
+        "gamecube": false,
+        "psp": true,
+        "ultimate": true
+    },
+    {
+        "name": "Blaze",
+        "origin": "Edenia",
+        "alignment": "3",
+        "costumevariations": "2",
+        "ps2": false,
+        "gamecube": false,
+        "psp": true,
+        "ultimate": true
+    },
+    {
+        "name": "Sonya",
+        "origin": "Earthrealm",
+        "alignment": "Good",
+        "costumevariations": "2",
+        "ps2": false,
+        "gamecube": false,
+        "psp": false,
+        "ultimate": true
+    },
+    {
+        "name": "Drahmin",
+        "origin": "Netherrealm",
+        "alignment": "Evil",
+        "costumevariations": "2",
+        "ps2": false,
+        "gamecube": false,
+        "psp": false,
+        "ultimate": true
+    },
+    {
+        "name": "Sareena",
+        "origin": "Netherrealm",
+        "alignment": "Good",
+        "costumevariations": "2",
+        "ps2": false,
+        "gamecube": false,
+        "psp": false,
+        "ultimate": true
+    },
+    {
+        "name": "Quan chi",
+        "origin": "Netherrealm",
+        "alignment": "Evil",
+        "costumevariations": "2",
+        "ps2": false,
+        "gamecube": false,
+        "psp": false,
+        "ultimate": true
+    },
+    {
+        "name": "Shang Tsung",
+        "origin": "Earthrealm",
+        "alignment": "Evil",
+        "costumevariations": "2",
+        "ps2": false,
+        "gamecube": false,
+        "psp": false,
+        "ultimate": true
+    },
+    {
+        "name": "Kung Lao",
+        "origin": "Earthrealm",
+        "alignment": "Good",
+        "costumevariations": "2",
+        "ps2": false,
+        "gamecube": false,
+        "psp": false,
+        "ultimate": true
+    },
+    {
+        "name": "Johnny Cage",
+        "origin": "Earthrealm",
+        "alignment": "Good",
+        "costumevariations": "2",
+        "ps2": false,
+        "gamecube": false,
+        "psp": false,
+        "ultimate": true
+    },
+    {
+        "name": "Sektor",
+        "origin": "Earthrealm",
+        "alignment": "Evil",
+        "costumevariations": "2",
+        "ps2": false,
+        "gamecube": false,
+        "psp": false,
+        "ultimate": true
+    },
+    {
+        "name": "Nitara",
+        "origin": "Vaeternus",
+        "alignment": "Neutral",
+        "costumevariations": "2",
+        "ps2": false,
+        "gamecube": false,
+        "psp": false,
+        "ultimate": true
+    },
+    {
+        "name": "Rain",
+        "origin": "Edenia",
+        "alignment": "Evil",
+        "costumevariations": "3",
+        "ps2": false,
+        "gamecube": false,
+        "psp": false,
+        "ultimate": true
+    },
+    {
+        "name": "Cyrax",
+        "origin": "Earthrealm",
+        "alignment": "Good",
+        "costumevariations": "2",
+        "ps2": false,
+        "gamecube": false,
+        "psp": false,
+        "ultimate": true
+    },
+    {
+        "name": "Reiko",
+        "origin": "Outworld",
+        "alignment": "Evil",
+        "costumevariations": "2",
+        "ps2": false,
+        "gamecube": false,
+        "psp": false,
+        "ultimate": true
+    },
+    {
+        "name": "Tremor",
+        "origin": "Earthrealm",
+        "alignment": "Evil",
+        "costumevariations": "2",
+        "ps2": false,
+        "gamecube": false,
+        "psp": false,
+        "ultimate": true
+    },
+    {
+        "name": "Onaga",
+        "origin": "Outworld",
+        "alignment": "Evil",
+        "costumevariations": "1",
+        "ps2": false,
+        "gamecube": false,
+        "psp": false,
+        "ultimate": true
+    }
+]

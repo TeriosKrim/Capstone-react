@@ -319,11 +319,13 @@ const Tier = () => {
         }
 
         // Add the item to the target tier if found
-        if (item) {
+        if (item && targetTier !== "characterPool") {
             setTiers((prev) => ({
                 ...prev,
                 [targetTier]: [...prev[targetTier], item],
             }));
+        } else if (item && targetTier === "characterPool") {
+            setCharacterPool((prev) => [...prev, item]);
         }
     };
 

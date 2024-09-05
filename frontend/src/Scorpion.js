@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import charactersData from "./data";
+import { useAuth } from "@clerk/clerk-react";
 
 const Scorpion = () => {
     // We set this to null for now so we can put data into this
     const [availability, setAvailbility] = useState(null);
     const [comments, setComments] = useState();
+    const { getToken } = useAuth();
 
     useEffect(() => {
         console.log(charactersData);
@@ -27,6 +29,9 @@ const Scorpion = () => {
     const commentPost = async (event) => {
         event.preventDefault();
 
+        const token = await getToken();
+        console.log(token);
+
         const userComment = event.target.elements.userComment.value;
 
         console.log("Submitting comment:", userComment);
@@ -34,7 +39,8 @@ const Scorpion = () => {
         const response = await fetch(`http://localhost:3001/comment`, {
             method: "POST",
             headers: {
-                "Content-type": "application/json",
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${token}`,
             },
             body: JSON.stringify({
                 userComment: userComment,

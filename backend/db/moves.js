@@ -7,19 +7,11 @@ const Moves = (db) => {
             primaryKey: true,
             autoIncrement: true,
         },
-        stance1: {
+        input: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        stance2: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        weapon: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        special: {
+        link: {
             type: DataTypes.STRING,
             allowNull: false,
         },
@@ -31,9 +23,13 @@ const Moves = (db) => {
                 key: "id",
             },
         },
-        link: {
-            type: DataTypes.TEXT,
+        stanceID: {
+            type: DataTypes.INTEGER,
             allowNull: false,
+            references: {
+                model: "stance",
+                key: "id",
+            },
         },
     });
 };

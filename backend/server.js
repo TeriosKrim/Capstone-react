@@ -1,10 +1,17 @@
 import express from "express";
 import cors from "cors";
-import { db, comment, fighter, moves } from "./db/db.js";
+import {
+    db,
+    comment,
+    fighter,
+    // moves
+} from "./db/db.js";
 import { Sequelize } from "sequelize";
 import { createClerkClient } from "@clerk/backend";
 // import { Clerk } from "@clerk/backend";
 // import clerkAPIKey from "./clerkAPIKey.js";
+import fs from "fs";
+import jwt from "jsonwebtoken";
 
 const server = express();
 server.use(cors());
@@ -72,8 +79,9 @@ server.get("/comment/:fighterID", async (req, res) => {
     });
 });
 
+//
 server.post("/comment", validateUserTokenMiddleware, async (req, res) => {
-    console.log(req.user);
+    // console.log(req.user);
     await comment.create(req.body);
     console.log(req.body);
     res.send({
@@ -94,14 +102,14 @@ server.post("/moves", async (req, res) => {
 });
 
 // Example route to fetch all moves
-server.get("/moves", async (req, res) => {
-    try {
-        const allMoves = await Moves(db).findAll();
-        res.status(200).json(allMoves);
-    } catch (error) {
-        res.status(500).json({ error: error.message });
-    }
-});
+// server.get("/moves", async (req, res) => {
+//     try {
+//         const allMoves = await Moves(db).findAll();
+//         res.status(200).json(allMoves);
+//     } catch (error) {
+//         res.status(500).json({ error: error.message });
+//     }
+// });
 // POST route to add data to the login table
 server.post("/login", async (req, res) => {
     try {
@@ -146,18 +154,38 @@ server.post("/tier", async (req, res) => {
     }
 });
 
+server.post("/stance", async (req, res) => {
+    try {
+        const newStance = await Stance(db).create(req.body); // Assuming req.body has fighterID, platformID, and stance
+        res.status(201).send(newStance);
+    } catch (error) {
+        console.error("Error creating stance:", error);
+        res.status(500).send({ error: "Error creating stance" });
+    }
+});
+
+server.post("/special", async (req, res) => {
+    try {
+        const newSpecial = await Special(db).create(req.body); // Assuming req.body has fighterID, platformID, and special
+        res.status(201).send(newSpecial);
+    } catch (error) {
+        console.error("Error creating special:", error);
+        res.status(500).send({ error: "Error creating special" });
+    }
+});
+
 server.listen(3001, () => console.log("Listening on port 3001"));
 
-const existingFighter = await fighter.findOne();
-if (!existingFighter) {
-    await fighter.create({
-        name: "Terios",
-        origin: "Earthrealm",
-        alignment: "Neutral",
-        costumevariation: "N/A",
-        ps2: false,
-        gamecube: false,
-        psp: false,
-        ultimate: false,
-    });
-}
+// const existingFighter = await fighter.findOne();
+// if (!existingFighter) {
+//     await fighter.create({
+//         name: "Terios",
+//         origin: "N/A",
+//         alignment: "N/A",
+//         costumevariation: "N/A",
+//         ps2: false,
+//         gamecube: false,
+//         psp: false,
+//         ultimate: false,
+//     });
+// }

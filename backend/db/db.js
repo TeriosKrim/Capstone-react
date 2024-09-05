@@ -6,29 +6,24 @@ import loginModel from "./login.js";
 import tierModel from "./tier.js";
 import platformModel from "./platform.js";
 import miscModel from "./misc.js";
+import stanceModel from "./stance.js";
+import SpecialModel from "./special.js";
+import kombatants from "./kombatants.json" with {type: "json"};
 
-const db = new Sequelize("postgres://localhost:5432/umkd", {});
+const db = new Sequelize("postgres://localhost:5432/umkd", { logging: false });
 
 // Initialize models
 const comment = commentModel(db);
 const fighter = fighterModel(db);
-const moves = movesModel(db);
 const login = loginModel(db);
 const tier = tierModel(db);
 const platform = platformModel(db);
 const misc = miscModel(db);
+const stance = stanceModel(db);
+const moves = movesModel(db);
+const special = SpecialModel(db);
 
 // Establish relationships (associations)
-fighter.hasMany(comment, { foreignKey: "fighterID" });
-comment.belongsTo(fighter, { foreignKey: "fighterID" });
-
-fighter.hasMany(moves, { foreignKey: "fighterID" });
-moves.belongsTo(fighter, { foreignKey: "fighterID" });
-
-fighter.hasMany(misc, { foreignKey: "fighterID" });
-misc.belongsTo(fighter, { foreignKey: "fighterID" });
-
-// Add more associations for other tables if needed
 
 const connectToDB = async () => {
     try {
@@ -37,6 +32,15 @@ const connectToDB = async () => {
 
         // Ensure models and associations are reflected in the database
         await db.sync(); // Use alter or force options carefully
+
+        const existingFighters = await fighter.findAll();
+     
+        if(existingFighters.length  < 5) {
+            for(const kombatant of kombatants) {
+                
+                await fighter.create(kombatant);
+            }
+        }
         console.log("Database synchronized.");
     } catch (error) {
         console.error("Unable to connect to the database:", error);
@@ -46,4 +50,15 @@ const connectToDB = async () => {
 // Connect to the database
 connectToDB();
 
-export { db, comment, fighter, moves, login, platform, tier, misc };
+export {
+    db,
+    comment,
+    fighter,
+    moves,
+    login,
+    platform,
+    tier,
+    misc,
+    special,
+    stance,
+};

@@ -11,6 +11,10 @@ const Tier = (db) => {
         fighterID: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            references: {
+                model: "fighters",
+                key: "id",
+            },
         },
         platformID: {
             type: DataTypes.INTEGER,
