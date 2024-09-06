@@ -11,11 +11,13 @@ const About = () => {
                         to a point where I would play the game for hours so once
                         I’ve learned how to make websites I wanted to make one
                         for the 3d mortal kombat games the first being deception
-                        since it’s my favorite game and also they’re are
-                        different tier list for the game so I decided to add the
-                        tier list based off the 3d mk community which if you are
-                        not in the discord you should join it if you love the 3d
-                        MK games as much as me in the
+                        since it’s my favorite game and also the tier list are
+                        different for which version of the game you are playing
+                        so I decided to add the tier list section so people can
+                        rate the characters and see how they stack up to each
+                        other based on the 3d mk community you are not in the
+                        discord you should join it if you love the 3d MK games
+                        as much as me in the
                         <br />
                         <a href="https://discord.com/invite/4TafRnXrcK">
                             3D Mortal Kombat discord

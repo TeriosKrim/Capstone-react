@@ -7,6 +7,7 @@ import About from "./About";
 import Tier from "./Tier/Tier";
 import "./App.css"; // Import the consolidated CSS file
 import Scorpion from "./Scorpion";
+import Onaga from "./Onaga";
 import {
     ClerkProvider,
     SignedIn,
@@ -18,6 +19,7 @@ import {
     useUser,
     useAuth,
 } from "@clerk/clerk-react";
+import KombatantDetails from "./KombatantDetails";
 
 if (!process.env.REACT_APP_CLERK_PUBLISHABLE_KEY) {
     throw new Error("Missing Publishable Key!");
@@ -49,6 +51,24 @@ const myRoutes = createBrowserRouter([
             <>
                 <Navbar />
                 <Scorpion />
+            </>
+        ),
+    },
+    {
+        path: "/kombatantDetails/:id",
+        element: (
+            <>
+                <Navbar />
+                <KombatantDetails />
+            </>
+        ),
+    },
+    {
+        path: "/onaga",
+        element: (
+            <>
+                <Navbar />
+                <Onaga />
             </>
         ),
     },

@@ -26,10 +26,10 @@ const Moves = (db) => {
         stanceID: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            references: {
-                model: "stance",
-                key: "id",
-            },
+            // references: {
+            //     model: "stance",
+            //     key: "id",
+            // },
         },
     });
 };

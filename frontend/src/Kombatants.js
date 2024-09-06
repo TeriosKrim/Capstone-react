@@ -1,10 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import { Link } from "react-router-dom";
 
 /*We take the data from Data.js */
 const Kombatants = () => {
-    const [characters, setCharacters] = useState(["Kenshi", "Jade"]);
+    const [kombatants, setCombantants] = useState([]);
+
+    useEffect(() => {
+        const makeAPICall = async () => {
+            const res = await fetch(`http://localhost:3001/kombatants`);
+            const data = await res.json();
+            setCombantants(data.kombatants);
+        };
+        makeAPICall();
+    }, []);
 
     return (
         <>
@@ -14,17 +23,19 @@ const Kombatants = () => {
                     <div id="base">
                         {/* we loop through each character and have it */}
                         {/* Return the character image */}
-                        {characters.map((character) => {
+                        {kombatants.map((kombatant) => {
                             return (
-                                <img
-                                    src={`img/Characters/icon/${character}.png`}
-                                    className="img-fluid"
-                                    alt={character}
-                                    key={character}
-                                />
+                                <Link to={`/kombatantDetails/${kombatant.id}`}>
+                                    <img
+                                        src={`/img/Characters/icon/${kombatant.name}.png`}
+                                        className="img-fluid"
+                                        alt={kombatant.name}
+                                        key={kombatant.id}
+                                    />
+                                </Link>
                             );
                         })}
-                        <div>
+                        {/* <div>
                             <Link to="/scorpion">
                                 <img
                                     src="img/Characters/icon/Scorpion.png"
@@ -57,10 +68,10 @@ const Kombatants = () => {
                                 className="img-fluid"
                                 alt="Havik"
                             />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
-                <div className="row">
+                {/* <div className="row">
                     <div id="base">
                         <div>
                             <img
@@ -276,9 +287,9 @@ const Kombatants = () => {
                             alt="Tremor"
                         />
                     </div>
-                </div>
+                </div> */}
 
-                <div className="row text-center" id="bossName">
+                {/* <div className="row text-center" id="bossName">
                     <div className="col">
                         <span
                             style={{
@@ -288,19 +299,19 @@ const Kombatants = () => {
                             Boss character
                         </span>
                     </div>
-                </div>
+                </div> */}
 
-                <div>
+                {/* <div>
                     <div className="col" id="onaga">
-                        <a href="onaga.html">
+                        <Link to={"/onaga"}>
                             <img
                                 src="img/Characters/icon/Onaga.png"
                                 className="customWidth"
                                 alt="Onaga"
                             />
-                        </a>
+                        </Link>
                     </div>
-                </div>
+                </div> */}
                 <div id="disclaimer">
                     <p id="mod">Mod created by Ermaccer</p>
                     <p id="mod">I am not affiliated with the mod of any kind</p>

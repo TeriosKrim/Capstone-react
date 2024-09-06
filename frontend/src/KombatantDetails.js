@@ -2,12 +2,16 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import charactersData from "./data";
 import { useAuth } from "@clerk/clerk-react";
+import { useParams } from "react-router-dom";
 
-const Scorpion = () => {
+const KombatantDetails = () => {
+    const { id } = useParams();
     // We set this to null for now so we can put data into this
     const [availability, setAvailbility] = useState(null);
     const [comments, setComments] = useState();
     const { getToken } = useAuth();
+    const [kombatant, setKombatant] = useState();
+    const [isPrimary, setIsPrimary] = useState(true);
 
     useEffect(() => {
         console.log(charactersData);
@@ -19,6 +23,11 @@ const Scorpion = () => {
         setAvailbility(matchingData);
 
         const makeAPICall = async () => {
+            const res2 = await fetch(`http://localhost:3001/kombatant/${id}`);
+            const data2 = await res2.json();
+            console.log(data2);
+            setKombatant(data2.kombatant);
+
             const res = await fetch(`http://localhost:3001/comment/3`);
             const data = await res.json();
             setComments(data.comments);
@@ -52,13 +61,13 @@ const Scorpion = () => {
     };
     // this checks if availability is not there
     // Returns Loading text
-    if (!availability || !comments) {
+    if (!availability || !comments || !kombatant) {
         return <div>Loading...</div>;
     }
 
     return (
         <>
-            <h1>SCORPION</h1>
+            <h1>{kombatant.name}</h1>
             <div className="container">
                 <div className="row" id="charSelect">
                     <div className="col">
@@ -73,12 +82,12 @@ const Scorpion = () => {
                             <span
                                 id="ps2-status"
                                 style={{
-                                    color: availability.ps2 ? "green" : "red",
+                                    color: kombatant.ps2 ? "green" : "red",
                                 }}
                             >
                                 {/*This checks if availabilty Ps2 is true */}
                                 {/* if it is insert yes otherwise no */}
-                                {availability.ps2 ? "YES" : "NO"}
+                                {kombatant.ps2 ? "YES" : "NO"}
                             </span>
                         </div>
                         <div className="row" id="GameCube">
@@ -86,12 +95,10 @@ const Scorpion = () => {
                             <span
                                 id="gamecube-status"
                                 style={{
-                                    color: availability.gamecube
-                                        ? "green"
-                                        : "red",
+                                    color: kombatant.gamecube ? "green" : "red",
                                 }}
                             >
-                                {availability.gamecube ? "YES" : "NO"}
+                                {kombatant.gamecube ? "YES" : "NO"}
                             </span>
                         </div>
                         <div className="row" id="psp">
@@ -99,10 +106,10 @@ const Scorpion = () => {
                             <span
                                 id="psp-status"
                                 style={{
-                                    color: availability.psp ? "green" : "red",
+                                    color: kombatant.psp ? "green" : "red",
                                 }}
                             >
-                                {availability.psp ? "YES" : "NO"}
+                                {kombatant.psp ? "YES" : "NO"}
                             </span>
                         </div>
                         <div className="row" id="ult">
@@ -110,20 +117,24 @@ const Scorpion = () => {
                             <span
                                 id="ultimate-status"
                                 style={{
-                                    color: availability.ultimate
-                                        ? "green"
-                                        : "red",
+                                    color: kombatant.ultimate ? "green" : "red",
                                 }}
                             >
-                                {availability.ultimate ? "YES" : "NO"}
+                                {kombatant.ultimate ? "YES" : "NO"}
                             </span>
                         </div>
                     </div>
                     <div className="col" id="charaImg">
                         <img
-                            src="img/Characters/Primary/Scorpion render2.png"
+                            src={`/img/Characters/${
+                                isPrimary ? "Primary" : "ALT"
+                            }/${kombatant.name}.png`}
                             className="scorpion"
-                            alt="Scorpion costume"
+                            alt={`${kombatant.name} costume`}
+                            onClick={() => {
+                                setIsPrimary(!isPrimary);
+                            }}
+                            style={{ cursor: "pointer" }}
                         />
                     </div>
                 </div>
@@ -530,7 +541,6 @@ const Scorpion = () => {
                                 })}
                             </div>
                         </div>
-                        "
                         <div className="row">
                             <h5>Add a comment about this character:</h5>
                             <form id="comment-form" onSubmit={commentPost}>
@@ -588,4 +598,4 @@ const Scorpion = () => {
         </>
     );
 };
-export default Scorpion;
+export default KombatantDetails;

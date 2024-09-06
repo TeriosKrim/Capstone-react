@@ -353,7 +353,7 @@ h1 {
     font-size: 30px;
     font-family: "Bronzier", "Arial", sans-serif;
 }
-#scorpionImg {
+#charaImg {
     display: flex;
     align-items: flex-start;
     justify-content: end;
@@ -522,4 +522,7 @@ h2 {
     justify-content: center;
     height: 100vh;
     width: 100vw;
+}
+#buttonKey {
+    font-family: "Bronzier", "Arial", sans-serif;
 }

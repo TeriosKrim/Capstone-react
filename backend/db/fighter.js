@@ -23,6 +23,11 @@ const Fighter = (db) => {
             type: DataTypes.STRING,
             allowNull: false,
         },
+        roster: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            defaultValue: "base",
+        },
         ps2: {
             type: DataTypes.BOOLEAN,
             allowNull: false,

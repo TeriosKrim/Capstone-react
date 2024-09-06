@@ -174,6 +174,14 @@ server.post("/special", async (req, res) => {
     }
 });
 
+server.get("/kombatants", async (req, res) => {
+    res.send({ kombatants: await fighter.findAll() });
+});
+
+server.get("/kombatant/:id", async (req, res) => {
+    res.send({ kombatant: await fighter.findByPk(req.params.id) });
+});
+
 server.listen(3001, () => console.log("Listening on port 3001"));
 
 // const existingFighter = await fighter.findOne();
