@@ -532,7 +532,14 @@ const KombatantDetails = () => {
                                 <h2>COMMENTS</h2>
                                 {comments.map((comment) => {
                                     return (
-                                        <p id="userComment">
+                                        <p id="userComment" key={comment.id}>
+                                            {comment.userMetaData.firstName}
+                                            <img
+                                                src={
+                                                    comment.userMetaData
+                                                        .imageUrl
+                                                }
+                                            ></img>
                                             <strong>
                                                 {comment.userComment}
                                             </strong>

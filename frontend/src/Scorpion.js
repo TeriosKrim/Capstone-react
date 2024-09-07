@@ -4,9 +4,11 @@ import charactersData from "./data";
 import { useAuth } from "@clerk/clerk-react";
 
 const Scorpion = () => {
+    console.log("scorpion");
     // We set this to null for now so we can put data into this
     const [availability, setAvailbility] = useState(null);
     const [comments, setComments] = useState();
+    console.log(comments);
     const { getToken } = useAuth();
 
     useEffect(() => {
@@ -521,7 +523,8 @@ const Scorpion = () => {
                                 <h2>COMMENTS</h2>
                                 {comments.map((comment) => {
                                     return (
-                                        <p id="userComment">
+                                        <p id="userComment" key={comment.id}>
+                                            {comment.createdByClerkUserId}
                                             <strong>
                                                 {comment.userComment}
                                             </strong>

@@ -235,7 +235,22 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 0px;
+    width: 800px;
+    margin: 0px auto;
+    padding: 0px;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    margin: 0px auto;
+}
+
+.kombatantList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
     padding: 0px;
 }
 .img-fluid {

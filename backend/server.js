@@ -17,10 +17,19 @@ const server = express();
 server.use(cors());
 
 server.use(express.json());
-
+console.log(process.env.CLERK_SECRET_KEY);
 const clerkClient = createClerkClient({
-    secretKey: process.env.CLERK_SECRET_KEY,
+    // secretKey: process.env.CLERK_SECRET_KEY,
+    secretKey: "sk_test_n61uD5dtM2vM9Qa0GwUhU7AyVAevx0qnoQ6NVEtR1V",
 });
+// In your route / etc:
+// clerkClient.users
+//     .getUser(
+//         "user_2lNofb6N7kTQPNf5E4vxYkgvyym" /* user id from the token, see video / slides */
+//     )
+//     .then((user) => {
+//         console.log(user);
+//     });
 
 const validateUserTokenMiddleware = (req, res, next) => {
     const header = req.headers.authorization;
@@ -72,9 +81,21 @@ const validateUserTokenMiddleware = (req, res, next) => {
 };
 
 server.get("/comment/:fighterID", async (req, res) => {
+    const comments = await comment.findAll({
+        where: { fighterID: req.params.fighterID },
+    });
+
+    const userMetaDataPromises = comments.map((comment) => {
+        return clerkClient.users.getUser(comment.createdByClerkUserId);
+    });
+    const userMetaData = await Promise.all(userMetaDataPromises);
+
     res.send({
-        comments: await comment.findAll({
-            where: { fighterID: req.params.fighterID },
+        comments: comments.map((comment, index) => {
+            return {
+                ...comment.dataValues,
+                userMetaData: userMetaData[index],
+            };
         }),
     });
 });
@@ -82,7 +103,10 @@ server.get("/comment/:fighterID", async (req, res) => {
 //
 server.post("/comment", validateUserTokenMiddleware, async (req, res) => {
     // console.log(req.user);
-    await comment.create(req.body);
+    await comment.create({
+        ...req.body,
+        createdByClerkUserId: req.auth.clerkUserId,
+    });
     console.log(req.body);
     res.send({
         comments: await comment.findAll({

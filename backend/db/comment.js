@@ -10,6 +10,10 @@ const Comment = (db) => {
         // loginID: {
         //     type: DataTypes.STRING,
         //     allowNull: false,
+        createdByClerkUserId: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
         // },
         userComment: {
             type: DataTypes.STRING,
