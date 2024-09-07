@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import charactersData from "./data";
+import charactersData from "../data";
 import { useAuth } from "@clerk/clerk-react";
 
 const Scorpion = () => {

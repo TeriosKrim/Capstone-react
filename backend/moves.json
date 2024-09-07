@@ -98,7 +98,7 @@
                 "fighterID": 3
             }
         ],
-        "MoiFah": [
+        "Moi Fah": [
             {
                 "move": "Low fury",
                 "button": "f3,3",
@@ -162,6 +162,50 @@
                 "fighterID": 3
             }
         ],
+        "Dragon(Onaga)": [
+            {
+                "move": "Dragon reach",
+                "button": "1",
+                "link": "https://youtu.be/1pE4OazVXLQ",
+                "fighterID": 44
+            },
+            {
+                "move": "Triple dragon hit",
+                "button": "2",
+                "link": "https://youtu.be/_O7CdeaEqmQ",
+                "fighterID": 44
+            },
+            {
+                "move": "Forceful hand",
+                "button": "3",
+                "link": "https://youtu.be/4s8hfDdJwpM",
+                "fighterID": 44
+            },
+            {
+                "move": "Collar bone buster",
+                "button": "4",
+                "link": "https://youtu.be/ZgD9L7V9r-c",
+                "fighterID": 44
+            },
+            {
+                "move": "Crunch kick",
+                "button": "d1",
+                "link": "https://youtu.be/MII6zDJhX48",
+                "fighterID": 44
+            },
+            {
+                "move": "Groin kick",
+                "button": "d2",
+                "link": "https://youtu.be/6XZyvrfNPeo",
+                "fighterID": 44
+            },
+            {
+                "move": "Crouching dragon",
+                "button": "d3",
+                "link": "https://youtu.be/-ve1MpMT1qA",
+                "fighterID": 44
+            }
+        ],
         "Special moves": [
             {
                 "move": "Bloody spear",
@@ -204,6 +248,36 @@
                 "button": "d,d,u,b,1",
                 "link": "",
                 "fighterID": 3
+            },
+            {
+                "move": "Dragon's fire",
+                "button": "f,b,1",
+                "link": "https://youtu.be/Tko4hxsVGjw",
+                "fighterID": 44
+            },
+            {
+                "move": "Flame breath",
+                "button": "f,d,1",
+                "link": "https://youtu.be/Oy6yubHWtYA",
+                "fighterID": 44
+            },
+            {
+                "move": "Jumping stomp",
+                "button": "f,f,1",
+                "link": "https://youtu.be/ZQxYMzRSkn8",
+                "fighterID": 44
+            },
+            {
+                "move": "Forceful doom",
+                "button": "f,f,2(or grab)",
+                "link": "https://youtu.be/ZcLACWV-7KE",
+                "fighterID": 44
+            },
+            {
+                "move": "Dirty face",
+                "button": "f,f,3",
+                "link": "https://youtu.be/itlW16It-KM",
+                "fighterID": 44
             }
         ]
     }

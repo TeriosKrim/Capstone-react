@@ -53,7 +53,7 @@ const Tier = () => {
         {
             id: "Sub-Zero",
             name: "Sub-Zero",
-            image: "img/Characters/icon/Sub Zero.png",
+            image: "img/Characters/icon/Sub-Zero.png",
             versions: ["PS2/Xbox", "Gamecube", "PSP", "Ultimate"],
         },
         {
@@ -77,7 +77,7 @@ const Tier = () => {
         {
             id: "Li-Mei",
             name: "Li-Mei",
-            image: "img/Characters/icon/Li mei.png",
+            image: "img/Characters/icon/Li-mei.png",
             versions: ["PS2/Xbox", "Gamecube", "PSP", "Ultimate"],
         },
         {

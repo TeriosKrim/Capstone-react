@@ -28,7 +28,7 @@ const KombatantDetails = () => {
             console.log(data2);
             setKombatant(data2.kombatant);
 
-            const res = await fetch(`http://localhost:3001/comment/3`);
+            const res = await fetch(`http://localhost:3001/comment/${id}`);
             const data = await res.json();
             setComments(data.comments);
         };
@@ -53,7 +53,7 @@ const KombatantDetails = () => {
             },
             body: JSON.stringify({
                 userComment: userComment,
-                fighterID: 3,
+                fighterID: kombatant.name,
             }),
         });
         const data = await response.json();
@@ -193,7 +193,7 @@ const KombatantDetails = () => {
                                 </div>
                             </div>
 
-                            <div className="row text-center">
+                            <div className="row text-center" id="buttonKey">
                                 <p>1 = Attack 1</p>
                                 <p>2 = Attack 2</p>
                                 <p>3 = Attack 3</p>
@@ -532,16 +532,29 @@ const KombatantDetails = () => {
                                 <h2>COMMENTS</h2>
                                 {comments.map((comment) => {
                                     return (
-                                        <p id="userComment" key={comment.id}>
-                                            {comment.userMetaData.firstName}
-                                            <img
-                                                src={
-                                                    comment.userMetaData
-                                                        .imageUrl
-                                                }
-                                            ></img>
+                                        <p
+                                            id="userComment"
+                                            key={comment.id}
+                                            className="comment"
+                                        >
+                                            <span className="user-meta">
+                                                <img
+                                                    className="user-image"
+                                                    src={
+                                                        comment.userMetaData
+                                                            .imageUrl
+                                                    }
+                                                    alt="User"
+                                                />
+                                                <span className="user-name">
+                                                    {
+                                                        comment.userMetaData
+                                                            .username
+                                                    }
+                                                </span>
+                                            </span>
                                             <strong>
-                                                {comment.userComment}
+                                                : {comment.userComment}
                                             </strong>
                                         </p>
                                     );

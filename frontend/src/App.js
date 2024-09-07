@@ -6,8 +6,7 @@ import Kombatants from "./Kombatants";
 import About from "./About";
 import Tier from "./Tier/Tier";
 import "./App.css"; // Import the consolidated CSS file
-import Scorpion from "./Scorpion";
-import Onaga from "./Onaga";
+
 import {
     ClerkProvider,
     SignedIn,
@@ -46,15 +45,6 @@ const myRoutes = createBrowserRouter([
         ),
     },
     {
-        path: "/scorpion",
-        element: (
-            <>
-                <Navbar />
-                <Scorpion />
-            </>
-        ),
-    },
-    {
         path: "/kombatantDetails/:id",
         element: (
             <>
@@ -63,15 +53,7 @@ const myRoutes = createBrowserRouter([
             </>
         ),
     },
-    {
-        path: "/onaga",
-        element: (
-            <>
-                <Navbar />
-                <Onaga />
-            </>
-        ),
-    },
+
     {
         path: "/about",
         element: (
