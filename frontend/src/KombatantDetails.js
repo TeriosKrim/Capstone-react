@@ -291,40 +291,30 @@ const KombatantDetails = () => {
                             className="col text-center justify-content-start"
                             id="stance1"
                         >
-                            {console.log(kombatant.specials)}
-                            {kombatant.specials.map((specials) => {
-                                return (
-                                    <>
-                                        <h2>SPECIAL MOVES </h2>
-                                        <table className="move-table">
-                                            <tbody>
-                                                {specials.moves.map((move) => {
-                                                    return (
-                                                        <tr key={move.id}>
-                                                            <td>{move.move}</td>
-                                                            <td>
-                                                                {move.button}
-                                                            </td>
-                                                            <td>
-                                                                <a
-                                                                    href={
-                                                                        move.link
-                                                                    }
-                                                                >
-                                                                    Link
-                                                                </a>
-                                                            </td>
-                                                        </tr>
-                                                    );
-                                                })}
-                                            </tbody>
-                                        </table>
-                                    </>
-                                );
-                            })}
+                            <h2>SPECIAL MOVES</h2>
+                            {/* Check if kombatant.specials exists and is an array */}
+                            {kombatant.specials &&
+                            kombatant.specials.length > 0 ? (
+                                <table className="move-table">
+                                    <tbody>
+                                        {kombatant.specials.map((special) => (
+                                            <tr key={special.id}>
+                                                <td>{special.move}</td>
+                                                <td>{special.button}</td>
+                                                <td>
+                                                    <a href={special.link}>
+                                                        Link
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            ) : (
+                                <p>No special moves found.</p>
+                            )}
                         </div>
 
-                        <h2>DB data above this</h2>
                         <div className="row">
                             <div className="col" id="comments">
                                 <h2>COMMENTS</h2>
