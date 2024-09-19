@@ -247,7 +247,39 @@ const KombatantDetails = () => {
                                     return (
                                         <>
                                             <h2>{stance.name}</h2>
-                                            <table className="move-table">
+                                            <table
+                                                className="move-table"
+                                                style={
+                                                    {
+                                                        // border: "1px solid white",
+                                                    }
+                                                }
+                                            >
+                                                <thead>
+                                                    <tr>
+                                                        <th
+                                                            style={{
+                                                                width: "33%",
+                                                            }}
+                                                        >
+                                                            Name
+                                                        </th>
+                                                        <th
+                                                            style={{
+                                                                width: "33%",
+                                                            }}
+                                                        >
+                                                            Buttons
+                                                        </th>
+                                                        <th
+                                                            style={{
+                                                                width: "33%",
+                                                            }}
+                                                        >
+                                                            Video
+                                                        </th>
+                                                    </tr>
+                                                </thead>
                                                 <tbody>
                                                     {stance.moves.map(
                                                         (move) => {
@@ -296,6 +328,31 @@ const KombatantDetails = () => {
                             {kombatant.specials &&
                             kombatant.specials.length > 0 ? (
                                 <table className="move-table">
+                                    <thead>
+                                        <tr>
+                                            <th
+                                                style={{
+                                                    width: "33%",
+                                                }}
+                                            >
+                                                Name
+                                            </th>
+                                            <th
+                                                style={{
+                                                    width: "33%",
+                                                }}
+                                            >
+                                                Buttons
+                                            </th>
+                                            <th
+                                                style={{
+                                                    width: "33%",
+                                                }}
+                                            >
+                                                Video
+                                            </th>
+                                        </tr>
+                                    </thead>
                                     <tbody>
                                         {kombatant.specials.map((special) => (
                                             <tr key={special.id}>
