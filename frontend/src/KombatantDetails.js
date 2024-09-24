@@ -12,6 +12,7 @@ const KombatantDetails = () => {
     const { getToken } = useAuth();
     const [kombatant, setKombatant] = useState();
     const [isPrimary, setIsPrimary] = useState(true);
+    const [isEnlarged, setIsEnlarged] = useState(false);
 
     useEffect(() => {
         /*This look at data.js and it looks for the name of that character
@@ -132,8 +133,13 @@ const KombatantDetails = () => {
                             alt={`${kombatant.name} costume`}
                             onClick={() => {
                                 setIsPrimary(!isPrimary);
+                                setIsEnlarged(!isEnlarged);
                             }}
-                            style={{ cursor: "pointer" }}
+                            style={{
+                                cursor: "pointer",
+
+                                transition: "width 0.3 ease",
+                            }}
                         />
                     </div>
                 </div>
@@ -295,18 +301,22 @@ const KombatantDetails = () => {
                                                                         }
                                                                     </td>
                                                                     <td>
-                                                                        {
-                                                                            move.button
-                                                                        }
+                                                                        {move.button ===
+                                                                        "N/A"
+                                                                            ? null
+                                                                            : move.button}
                                                                     </td>
                                                                     <td>
-                                                                        <a
-                                                                            href={
-                                                                                move.link
-                                                                            }
-                                                                        >
-                                                                            Link
-                                                                        </a>
+                                                                        {move.link ===
+                                                                        "N/A" ? null : (
+                                                                            <a
+                                                                                href={
+                                                                                    move.link
+                                                                                }
+                                                                            >
+                                                                                Link
+                                                                            </a>
+                                                                        )}
                                                                     </td>
                                                                 </tr>
                                                             );
@@ -357,11 +367,20 @@ const KombatantDetails = () => {
                                         {kombatant.specials.map((special) => (
                                             <tr key={special.id}>
                                                 <td>{special.move}</td>
-                                                <td>{special.button}</td>
+                                                {/* Conditionally render button: show null if it's "N/A", otherwise show the button */}
                                                 <td>
-                                                    <a href={special.link}>
-                                                        Link
-                                                    </a>
+                                                    {special.button === "N/A"
+                                                        ? null
+                                                        : special.button}
+                                                </td>
+                                                {/* Conditionally render link: show null if it's "N/A", otherwise show the link */}
+                                                <td>
+                                                    {special.link ===
+                                                    "N/A" ? null : (
+                                                        <a href={special.link}>
+                                                            Link
+                                                        </a>
+                                                    )}
                                                 </td>
                                             </tr>
                                         ))}
