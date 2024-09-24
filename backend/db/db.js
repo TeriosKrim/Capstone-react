@@ -12,7 +12,7 @@ import specials from "./specials.json" with {type:"json"};
 import extra from "./extra.json" with {type:"json"};
 
 
-const db = new Sequelize("postgres://localhost:5432/umkd", { logging: false });
+const db = new Sequelize("postgres://postgres:ZxCvBnM1@localhost:5432/umkd", { logging: false });
 
 // Initialize models
 const comment = commentModel(db);
@@ -37,7 +37,7 @@ const connectToDB = async () => {
         console.log("Connection has been established successfully.");
 
         // Ensure models and associations are reflected in the database
-        await db.sync({alter: true}); // Use alter or force options carefully
+        await db.sync(); // Use alter or force options carefully
 
         const existingFighters = await fighter.findAll();
 
