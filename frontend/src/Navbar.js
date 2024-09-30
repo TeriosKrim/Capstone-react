@@ -50,6 +50,9 @@ const Navbar = () => {
                                     About
                                 </Link>
                             </li>
+                            <li className="nav-item">
+                                <Link to="/privacy-policy">Privacy Policy</Link>
+                            </li>
                         </ul>
                         <div className="d-flex bold">
                             <SignedOut>
